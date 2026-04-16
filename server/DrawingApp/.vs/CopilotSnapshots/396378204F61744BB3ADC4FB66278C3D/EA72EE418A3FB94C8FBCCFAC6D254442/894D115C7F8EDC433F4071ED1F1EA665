@@ -1,0 +1,127 @@
+﻿using Microsoft.Extensions.Configuration;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Text.Json;
+using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.Connectors.Google;
+
+namespace DrawingApp.Providers
+{
+    /**
+     * DrawingProvider Service
+     * -----------------------
+     * This service handles the communication with AI models (Gemini or GPT).
+     * It transforms user prompts into structured JSON data for canvas rendering.
+     */
+    public class DrawingProvider
+    {
+        private readonly HttpClient _httpClient;
+        private readonly string _apiKey;
+        private readonly string _apiUrl;
+
+        public DrawingProvider(HttpClient httpClient, IConfiguration configuration)
+        {
+            _httpClient = httpClient;
+
+            // Getting settings from appsettings.json
+            // Make sure to update these keys in your JSON file
+            _apiKey = configuration["AiSettings:ApiKey"] ?? "";
+            _apiUrl = configuration["AiSettings:ApiUrl"] ?? "";
+        }
+
+        /**
+         * Sends a natural language prompt to the AI and returns a JSON string 
+         * containing shape definitions (type, color, etc.).
+         * * @param prompt - The user's drawing request (e.g., "draw a red circle").
+         * @returns A sanitized JSON string for the frontend.
+         */
+        public async Task<DrawingResponse?> GenerateAiDrawingAsync(string prompt)
+        {
+            // Define the AI's behavior and the expected JSON schema
+            const string systemPrompt = @"
+            You are a Canvas Drawing Engine. Convert user requests into drawing commands.
+            Canvas size is 800x600.
+            Output ONLY valid JSON in this format:
+            {
+                ""Summary"": ""A brief description of what you drew"",
+                ""Commands"": [
+                    { ""Type"": ""rect"", ""X"": 50, ""Y"": 50, ""Width"": 100, ""Height"": 100, ""Color"": ""red"" },
+                    { ""Type"": ""line"", ""X"": 10, ""Y"": 10, ""ToX"": 100, ""ToY"": 100, ""Color"": ""blue"" }
+                ]
+            }";
+
+            var settings = new GeminiPromptExecutionSettings
+            {
+                ResponseMimeType = "application/json"
+            };
+
+            var result = await kernel.InvokePromptAsync(
+                $"{systemPrompt}\n\nUser Request: {userRequest}",
+                new KernelArguments(settings)
+            );
+
+            return JsonSerializer.Deserialize<DrawingResponse>(result.ToString(), new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+            //try
+            //{
+            //    // 1. Prepare the Request Payload (GPT Format)
+            //    // If using Gemini, keep the "contents/parts" structure instead.
+            //    var requestBody = new
+            //    {
+            //        model = "gpt-4o-mini", // Efficient model for JSON generation
+            //        messages = new[]
+            //        {
+            //            new {
+            //                role = "system",
+            //                content = "You are a drawing assistant. Return ONLY a raw JSON object with this structure: " +
+            //                          "{ \"shapes\": [\"circle\", \"rect\"], \"color\": \"blue\" }. " +
+            //                          "Do not include markdown formatting or explanations."
+            //            },
+            //            new { role = "user", content = prompt }
+            //        },
+            //        response_format = new { type = "json_object" }
+            //    };
+
+            //    var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
+
+            //    // 2. Set Authorization Header (Required for OpenAI)
+            //    // Note: For Gemini, the key is usually passed in the URL (?key=...).
+            //    _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+
+            //    // 3. Execute Post Request
+            //    var response = await _httpClient.PostAsync(_apiUrl, content);
+
+            //    // Check for errors (e.g., 404, 401, 429)
+            //    if (!response.IsSuccessStatusCode)
+            //    {
+            //        string errorDetail = await response.Content.ReadAsStringAsync();
+            //        Console.WriteLine($"[AI Error Response] {errorDetail}");
+            //        return "{\"shapes\": [\"rect\"], \"color\": \"red\"}"; // Visual indicator of error
+            //    }
+
+            //    // 4. Parse AI Response
+            //    var jsonResponse = await response.Content.ReadAsStringAsync();
+            //    using var doc = JsonDocument.Parse(jsonResponse);
+
+            //    // Extract text from the AI message
+            //    string aiText = doc.RootElement
+            //        .GetProperty("choices")[0]
+            //        .GetProperty("message")
+            //        .GetProperty("content").GetString() ?? "";
+
+            //    // 5. Sanitize and Return
+            //    return aiText.Trim();
+            //}
+            //catch (Exception ex)
+            //{
+            //    // Logs the exception to the Visual Studio Output window
+            //    Console.WriteLine($"[Critical DrawingProvider Error] {ex.Message}");
+
+            //    // Fallback shape to prevent frontend crash on white canvas
+            //    return "{\"shapes\": [\"rect\"], \"color\": \"gray\"}";
+            //}
+        }
+    }
+}

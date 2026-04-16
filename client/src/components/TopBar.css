@@ -1,0 +1,72 @@
+/* Container Layout */
+.top-bar-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+/* Toolbar Buttons Styling */
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.drawing-selector {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Specific Button Colors from reference */
+.btn-new { background-color: #2196f3; }   /* Blue */
+.btn-send { background-color: #4caf50; }  /* Green */
+.btn-undo { background-color: #ff9800; }  /* Orange */
+.btn-clear { background-color: #f44336; } /* Red */
+.btn-save { background-color: #9c27b0; }  /* Purple */
+
+.btn:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+/* Prompt Input Section */
+.prompt-section {
+  padding: 12px;
+}
+
+.prompt-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.prompt-input:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}

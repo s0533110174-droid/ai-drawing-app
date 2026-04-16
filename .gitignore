@@ -1,0 +1,32 @@
+# --- General ---
+.DS_Store
+.env
+.env.local
+*.log
+
+# --- Client (React/Vite) ---
+client/node_modules/
+client/dist/
+client/.eslintcache
+client/package-lock.json
+
+# --- Server (.NET Core) ---
+# Build results
+server/**/bin/
+server/**/obj/
+
+# Visual Studio files
+server/.vs/
+server/*.user
+server/*.userosscache
+server/*.sln.docstates
+
+# Rider/Resharper
+server/.idea/
+
+# --- Databases ---
+*.db
+*.sqlite
+
+# --- User specific config ---
+appsettings.Development.json

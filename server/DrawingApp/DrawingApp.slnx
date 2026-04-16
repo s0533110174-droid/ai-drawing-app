@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DrawingApp.Api/DrawingApp.Api.csproj" />
+  <Project Path="DrawingApp.DM/DrawingApp.DM.csproj" />
+  <Project Path="DrawingApp.Provider/DrawingApp.Provider.csproj" />
+</Solution>
