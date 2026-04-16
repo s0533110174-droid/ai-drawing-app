@@ -37,7 +37,7 @@ namespace DrawingApp.Providers
          * * @param prompt - The user's drawing request (e.g., "draw a red circle").
          * @returns A sanitized JSON string for the frontend.
          */
-        public async Task<string> GenerateAiDrawingAsync(string userPrompt)
+        public async Task<string> GenerateAiDrawingAsync(string userPrompt,string currentShapesJson)
         {
             try
             {
@@ -88,25 +88,41 @@ namespace DrawingApp.Providers
                 };
 
                 const string systemInstruction = @"
-        You are a drawing assistant. You must return ONLY a JSON object with a property named 'shapes' which is an array of objects.
-        Each object in the array MUST follow this format:
+        You are an expert AI Drawing Assistant. 
+        Your goal is to generate NEW geometric shapes based on a user's request while considering the CURRENT state of the canvas.
+
+        STRICT RULES:
+        1. Context Awareness: Analyze the 'Current Canvas State' provided. 
+        2. No Overlap: Place new shapes in empty areas of the 800x600 canvas. Do not draw over existing shapes unless explicitly asked.
+        3. Output Format: Return ONLY a valid JSON object. No prose, no markdown blocks.
+        4. Schema:
         {
-            ""type"": ""rect"" or ""circle"" or ""line"",
-            ""x"": 150,
-            ""y"": 200,
-            ""color"": ""blue"",
-            ""radius"": 50,
-            ""width"": 100,
-            ""height"": 100,
-            ""toX"": 300,
-            ""toY"": 400
-        }
-        Coordinates: 800x600. Output ONLY the JSON.";
+            ""shapes"": [
+                {
+                    ""type"": ""rect"" | ""circle"" | ""line"",
+                    ""x"": number,
+                    ""y"": number,
+                    ""color"": string,
+                    ""radius"": number (for circles),
+                    ""width"": number (for rects),
+                    ""height"": number (for rects),
+                    ""toX"": number (for lines),
+                    ""toY"": number (for lines)
+                }
+            ]
+        }";
 
                 var prompt = $"""
-            Instructions: {systemInstruction}
-            User request: {userPrompt}
-            """;
+        SYSTEM INSTRUCTIONS: {systemInstruction}
+        
+        CURRENT CANVAS STATE (JSON): 
+        {currentShapesJson}
+
+        USER REQUEST: 
+        {userPrompt}
+        
+        Generate only the NEW shapes to be added:
+        """;
 
                 var result = await _kernel.InvokePromptAsync(prompt, new KernelArguments(settings));
                 return result.ToString();
@@ -117,7 +133,7 @@ namespace DrawingApp.Providers
                 Console.WriteLine($"[Critical DrawingProvider Error] {ex.Message}");
 
                 // Fallback shape to prevent frontend crash on white canvas
-                return "{\"shapes\": [\"rect\"], \"color\": \"red\"}";
+                return "{\"Commands\": [{\"type\": \"rect\", \"x\": 50, \"y\": 50, \"width\": 100, \"height\": 100, \"color\": \"red\"}]}";
             }
         }
     }

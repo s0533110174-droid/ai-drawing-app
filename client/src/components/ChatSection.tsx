@@ -51,7 +51,7 @@ const ChatSection: React.FC<ChatSectionProps> = ({
       <div className="input-area">
         <input
           type="text"
-          placeholder="מה לצייר?"
+          placeholder="What do you want to draw today?"
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -61,7 +61,7 @@ const ChatSection: React.FC<ChatSectionProps> = ({
           onClick={onSend} 
           disabled={loading || !prompt.trim()}
         >
-          {loading ? '...' : 'שלח'}
+          {loading ? '...' : 'Send'}
         </button>
       </div>
     </section>

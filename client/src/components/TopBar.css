@@ -1,72 +1,119 @@
-/* Container Layout */
+/* TopBar.css
+  Main stylesheet for the application's top navigation and action bar.
+  Layout: Left-aligned tools with modern slate/green/red color palette.
+*/
+
+/* Main container for the top bar */
 .top-bar-container {
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   width: 100%;
-  border-bottom: 1px solid #ddd;
-  background-color: #fff;
 }
 
-/* Toolbar Buttons Styling */
+/* Toolbar Actions Layout 
+  Uses justify-content: flex-start to align all items to the left.
+*/
 .toolbar-actions {
   display: flex;
+  justify-content: flex-start; /* Aligns items to the left */
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #eee;
-}
-
-.drawing-selector {
-  padding: 4px 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 13px;
-}
-
-.btn {
-  border: none;
-  border-radius: 4px;
-  padding: 6px 14px;
-  color: white;
-  font-weight: 600;
-  font-size: 13px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/* Specific Button Colors from reference */
-.btn-new { background-color: #2196f3; }   /* Blue */
-.btn-send { background-color: #4caf50; }  /* Green */
-.btn-undo { background-color: #ff9800; }  /* Orange */
-.btn-clear { background-color: #f44336; } /* Red */
-.btn-save { background-color: #9c27b0; }  /* Purple */
-
-.btn:hover:not(:disabled) {
-  filter: brightness(0.9);
-}
-
-/* Prompt Input Section */
-.prompt-section {
-  padding: 12px;
-}
-
-.prompt-input {
+  gap: 20px; /* Space between the selector and the buttons */
   width: 100%;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  outline: none;
-  box-sizing: border-box;
 }
 
-.prompt-input:focus {
-  border-color: #2196f3;
-  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+/* Styling for the Drawing ID selector (Dropdown) */
+.drawing-selector {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #f8fafc;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: none;
+  cursor: default;
+}
+
+/* Container for Undo, Redo, Clear, and Save buttons */
+.button-group {
+  display: flex;
+  gap: 10px; /* Consistent spacing between buttons */
+  justify-content: flex-start;
+}
+
+/* Shared styling for all toolbar buttons */
+.btn {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+/* Subtle hover effect for interactive buttons */
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(95%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Visual state for disabled buttons (e.g., when history is empty) */
+.btn:disabled {
+  background-color: #f1f5f9 !important;
+  color: #cbd5e1 !important;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* History Navigation Buttons (Undo/Redo) */
+.btn-undo, .btn-redo {
+  background-color: #64748b; /* Slate Gray */
+  color: white;
+}
+
+/* Destructive Action Button (Clear) */
+.btn-clear {
+  background-color: #ef4444; /* High-visibility Red */
+  color: white;
+}
+
+/* Persistence Action Button (Save) */
+.btn-save {
+  background-color: #10b981; /* Emerald Green */
+  color: white;
+  min-width: 85px;
+}
+
+/* Active press state for tactile feedback */
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments
+  Ensures the toolbar looks good on smaller viewports.
+*/
+@media (max-width: 768px) {
+  .top-bar-container {
+    padding: 10px 15px;
+  }
+  
+  .toolbar-actions {
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
 }

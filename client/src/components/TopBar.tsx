@@ -1,29 +1,36 @@
 import React from 'react';
-import { useDrawing } from '../hooks/useDrawing';
-import './TopBar.css'; // Importing the layout and color styles
+import './TopBar.css';
 
-/**
- * TopBar Component
- * * Provides a toolbar for drawing management and an AI prompt input field.
- * Designed to match a specific UI reference with color-coded action buttons.
- */
-const TopBar: React.FC = () => {
-  const { 
-    prompt, 
-    setPrompt, 
-    handleSend, 
-    loading, 
-    handleUndo,
-    handleClear,
-    handleSave,
-    handleNewDrawing,
-    canUndo,
-    drawingId 
-  } = useDrawing();
+interface TopBarProps {
+  prompt: string;
+  setPrompt: (val: string) => void;
+  handleSend: () => void;
+  loading: boolean;
+  handleUndo: () => void;
+  handleRedo: () => void;
+  handleClear: () => void;
+  handleSave: () => void;
+  handleNewDrawing: () => void;
+  canUndo: boolean;
+  canRedo: boolean;
+  drawingId?: string;
+}
 
-  /**
-   * Executes the drawing generation when the user presses 'Enter'.
-   */
+const TopBar: React.FC<TopBarProps> = ({
+  prompt,
+  setPrompt,
+  handleSend,
+  loading,
+  handleUndo,
+  handleRedo,
+  handleClear,
+  handleSave,
+  handleNewDrawing,
+  canUndo,
+  canRedo,
+  drawingId
+}) => {
+  
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !loading) {
       handleSend();
@@ -32,9 +39,8 @@ const TopBar: React.FC = () => {
 
   return (
     <div className="top-bar-container">
-      {/* Upper Toolbar: Action Buttons */}
       <div className="toolbar-actions">
-        <select value={drawingId} className="drawing-selector">
+        <select value={drawingId} className="drawing-selector" readOnly>
           <option value="10">Drawing #10</option>
         </select>
 
@@ -42,12 +48,12 @@ const TopBar: React.FC = () => {
           + New Drawing
         </button>
 
-        <button onClick={handleSend} disabled={loading} className="btn btn-send">
-          {loading ? '...' : 'Send'}
-        </button>
-
         <button onClick={handleUndo} disabled={!canUndo} className="btn btn-undo">
           Undo
+        </button>
+
+        <button onClick={handleRedo} disabled={!canRedo} className="btn btn-redo">
+          Redo
         </button>
 
         <button onClick={handleClear} className="btn btn-clear">
@@ -59,19 +65,6 @@ const TopBar: React.FC = () => {
         </button>
       </div>
 
-      {/* Lower Section: AI Prompt Input */}
-      <div className="prompt-section">
-        <input
-          type="text"
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Describe what you want to draw..."
-          className="prompt-input"
-          disabled={loading}
-          dir="auto" // Supports both Hebrew and English text direction
-        />
-      </div>
     </div>
   );
 };

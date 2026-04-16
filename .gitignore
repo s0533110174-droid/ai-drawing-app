@@ -17,9 +17,20 @@ server/**/obj/
 
 # Visual Studio files
 server/.vs/
+server/**/.vs/
 server/*.user
 server/*.userosscache
 server/*.sln.docstates
+server/**/*.suo
+server/**/*.vsidx
+server/**/*.db
+server/**/*.db-shm
+server/**/*.db-wal
+server/**/DocumentLayout.json
+server/**/DocumentLayout.backup.json
+server/**/*.metadata.v10.bin
+server/**/*.projects.v10.bin
+server/**/*.strings.v10.bin
 
 # Rider/Resharper
 server/.idea/

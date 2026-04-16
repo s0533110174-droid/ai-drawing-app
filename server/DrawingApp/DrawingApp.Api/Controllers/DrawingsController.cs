@@ -15,11 +15,11 @@ public class DrawingsController : ControllerBase
     }
 
     [HttpGet("generate")]
-    public async Task<IActionResult> Generate([FromQuery] string prompt)
+    public async Task<IActionResult> Generate([FromQuery] string prompt, [FromQuery] string currentShapesJson)
     {
         if (string.IsNullOrEmpty(prompt)) return BadRequest("Prompt is required");
 
-        var result = await _provider.GenerateAiDrawingAsync(prompt);
+        var result = await _provider.GenerateAiDrawingAsync(prompt, currentShapesJson);
         return Ok(new { drawingData = result });
     }
 }

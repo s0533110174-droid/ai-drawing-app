@@ -5,12 +5,7 @@ import ChatSection from './components/ChatSection';
 import CanvasSection from './components/CanvasSection';
 import './App.css';
 
-/**
- * Root Application Component.
- * Manages the layout and orchestrates data flow between the drawing hook and UI components.
- */
 const App: React.FC = () => {
-  // Reference to the canvas element, shared with the custom hook
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   // Destructuring all necessary logic from our custom TypeScript hook
@@ -20,45 +15,38 @@ const App: React.FC = () => {
     messages, 
     loading, 
     currentShapes,
-    drawings,
-    loadDrawing, 
+    canUndo,      
+    canRedo,
     handleSend, 
     handleSave, 
-    setStep, 
-    setHistory, 
-    setMessages 
+    handleUndo, 
+    handleRedo, 
+    handleClear,   
+    handleNewDrawing,
+    loadDrawing,
+    drawings,
+    drawingId
   } = useDrawing(canvasRef);
-
-  /**
-   * Resets the application state to a blank canvas and empty chat.
-   */
-  const handleClearAll = (): void => {
-    setHistory([]);
-    setStep(-1);
-    setMessages([]);
-  };
-
-  /**
-   * Handles the Undo action by moving the history step back.
-   */
-  const handleUndo = (): void => {
-    setStep((prev) => Math.max(-1, prev - 1));
-  };
 
   return (
     <div className="app-wrapper">
       {/* Header with drawing selection and main actions */}
       <TopBar 
-        drawings={drawings} 
-        onSelectDrawing={loadDrawing}
-        onSend={handleSend}
-        onSave={handleSave}
-        onUndo={handleUndo}
-        onClear={handleClearAll}
+        prompt={prompt}
+        setPrompt={setPrompt}
+        handleSend={handleSend}
+        loading={loading}
+        handleUndo={handleUndo}
+        handleRedo={handleRedo}
+        handleClear={handleClear}
+        handleSave={handleSave}
+        handleNewDrawing={handleNewDrawing}
+        canUndo={canUndo}
+        canRedo={canRedo}
+        drawingId={drawingId}
       />
 
       <main className="main-content">
-        {/* Left Side: Chat interface for AI commands */}
         <ChatSection 
           messages={messages} 
           prompt={prompt} 
@@ -67,8 +55,10 @@ const App: React.FC = () => {
           loading={loading} 
         />
 
-        {/* Right Side: Visual Canvas area */}
-       <CanvasSection canvasRef={canvasRef} currentShapes={currentShapes} />
+        <CanvasSection 
+          canvasRef={canvasRef} 
+          currentShapes={currentShapes} 
+        />
       </main>
     </div>
   );
