@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useDrawing } from './hooks/useDrawing';
 import TopBar from './components/TopBar';
 import ChatSection from './components/ChatSection';
@@ -6,10 +6,9 @@ import CanvasSection from './components/CanvasSection';
 import './App.css';
 
 const App: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  // Destructuring all necessary logic from our custom TypeScript hook
+  // We get the canvasRef directly from the hook logic
   const { 
+    canvasRef, // Get the ref from the hook
     prompt, 
     setPrompt, 
     messages, 
@@ -23,10 +22,10 @@ const App: React.FC = () => {
     handleRedo, 
     handleClear,   
     handleNewDrawing,
-    loadDrawing,
-    drawings,
+    loadDrawingFromHistory, 
+    allDrawings,
     drawingId
-  } = useDrawing(canvasRef);
+  } = useDrawing(); // No need to pass canvasRef if it's created inside the hook
 
   return (
     <div className="app-wrapper">
@@ -44,6 +43,9 @@ const App: React.FC = () => {
         canUndo={canUndo}
         canRedo={canRedo}
         drawingId={drawingId}
+        // FIX: Passing the correctly named variables
+        allDrawings={allDrawings} 
+        onLoadDrawing={loadDrawingFromHistory}
       />
 
       <main className="main-content">

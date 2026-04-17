@@ -16,7 +16,7 @@ export type Shape = {
 export interface Drawing {
   id: number;
   name: string;
-  commandsJson: string; // ה-JSON הגולמי מה-DB
+  commandsJson: string;
   createdAt: string;
   userId: number;
 }
