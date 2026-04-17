@@ -41,3 +41,14 @@ server/.idea/
 
 # --- User specific config ---
 appsettings.Development.json
+
+# Visual Studio files
+server/DrawingApp/.vs/
+[Dd]ebug/
+[Rr]elease/
+server/DrawingApp/*.user
+server/DrawingApp/*.suo
+server/DrawingApp/*.db-shm
+server/DrawingApp/*.db-wal
+server/DrawingApp/DrawingApp.Provider/bin/
+server/DrawingApp/DrawingApp.Provider/obj/

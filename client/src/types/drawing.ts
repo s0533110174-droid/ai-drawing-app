@@ -4,13 +4,13 @@ export type Message = {
 };
 
 export type Shape = {
-  type: 'rect' | 'circle';
-  x: number;
-  y: number;
-  color: string;
-  width?: number;
-  height?: number;
-  radius?: number;
+  Type: 'rect' | 'circle';
+  X: number;
+  Y: number;
+  Color: string;
+  Width?: number;
+  Height?: number;
+  Radius?: number;
 };
 
 export interface Drawing {
@@ -19,4 +19,9 @@ export interface Drawing {
   commandsJson: string;
   createdAt: string;
   userId: number;
+}
+
+export interface CanvasSectionProps {
+  canvasRef: React.RefObject<HTMLCanvasElement>;
+  currentShapes: Shape[]; // Data passed down from App.tsx
 }

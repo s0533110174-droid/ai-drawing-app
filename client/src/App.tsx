@@ -25,7 +25,7 @@ const App: React.FC = () => {
     loadDrawingFromHistory, 
     allDrawings,
     drawingId
-  } = useDrawing(); // No need to pass canvasRef if it's created inside the hook
+  } = useDrawing(); 
 
   return (
     <div className="app-wrapper">
@@ -43,7 +43,6 @@ const App: React.FC = () => {
         canUndo={canUndo}
         canRedo={canRedo}
         drawingId={drawingId}
-        // FIX: Passing the correctly named variables
         allDrawings={allDrawings} 
         onLoadDrawing={loadDrawingFromHistory}
       />
