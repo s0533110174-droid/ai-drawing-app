@@ -50,7 +50,7 @@ namespace DrawingApp.Providers
                 var settings = new GeminiPromptExecutionSettings
                 {
                     ResponseMimeType = "application/json",
-                    ResponseSchema = typeof(DrawingResponse), // הכרחי ל-Gemini 2.5
+                    ResponseSchema = typeof(DrawingResponse),
                     Temperature = 0.1f
                 };
 

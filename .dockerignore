@@ -1,0 +1,25 @@
+# --- Visual Studio & IDEs ---
+**/.vs/
+**/.vscode/
+**/*.user
+**/*.suo
+**/*.db-shm
+**/*.db-wal
+
+# --- .NET Build Output (Server) ---
+**/bin/
+**/obj/
+
+# --- Node/React Build Output (Client) ---
+**/node_modules/
+**/dist/
+**/.eslintcache
+
+# --- Docker Files ---
+**/.dockerignore
+**/docker-compose*
+**/Dockerfile*
+
+# --- Git ---
+**/.git/
+**/.gitignore
