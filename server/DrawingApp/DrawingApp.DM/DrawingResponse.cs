@@ -23,13 +23,11 @@ namespace DrawingApp.DM
 
         public float X { get; set; }
         public float Y { get; set; }
-
-        // שדות אופציונליים בהתאם לסוג הצורה
-        public float? ToX { get; set; } // עבור קווים
-        public float? ToY { get; set; } // עבור קווים
-        public float? Width { get; set; } // עבור מלבנים
-        public float? Height { get; set; } // עבור מלבנים
-        public float? Radius { get; set; } // עבור עיגולים
+        public float? ToX { get; set; } 
+        public float? ToY { get; set; }
+        public float? Width { get; set; }
+        public float? Height { get; set; }
+        public float? Radius { get; set; }
 
         public string Color { get; set; } = "black";
         public float LineWidth { get; set; } = 2;

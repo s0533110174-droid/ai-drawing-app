@@ -50,7 +50,7 @@ namespace DrawingApp.Providers
                 var settings = new GeminiPromptExecutionSettings
                 {
                     ResponseMimeType = "application/json",
-                    ResponseSchema = typeof(DrawingResponse), // הכרחי ל-Gemini 2.5
+                    ResponseSchema = typeof(DrawingResponse),
                     Temperature = 0.1f
                 };
 
@@ -99,8 +99,7 @@ namespace DrawingApp.Providers
                 // Logs the exception to the Visual Studio Output window
                 Console.WriteLine($"[Critical DrawingProvider Error] {ex.Message}");
 
-                // Fallback shape to prevent frontend crash on white canvas
-                return "{\"Commands\": [{\"type\": \"rect\", \"x\": 50, \"y\": 50, \"width\": 100, \"height\": 100, \"color\": \"red\"}]}";
+                throw new Exception("Gemini AI is currently unavailable. Please try again later.", ex);
             }
         }
 

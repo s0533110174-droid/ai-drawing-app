@@ -3,36 +3,39 @@
   "WorkspaceRootPath": "C:\\ShiraAI\\server\\DrawingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|solutionrelative:drawingapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E294992D-449A-518F-109F-50740674D45C}|DrawingApp.Provider\\DrawingApp.Provider.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.provider\\drawingprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E294992D-449A-518F-109F-50740674D45C}|DrawingApp.Provider\\DrawingApp.Provider.csproj|solutionrelative:drawingapp.provider\\drawingprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|solutionrelative:drawingapp.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|solutionrelative:drawingapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F88335CD-D626-065E-FB39-128C95524851}|DrawingApp.DM\\DrawingApp.DM.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.dm\\drawingresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F88335CD-D626-065E-FB39-128C95524851}|DrawingApp.DM\\DrawingApp.DM.csproj|solutionrelative:drawingapp.dm\\drawingresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|solutionrelative:drawingapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|solutionrelative:drawingapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.api\\controllers\\drawingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|solutionrelative:drawingapp.api\\controllers\\drawingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F88335CD-D626-065E-FB39-128C95524851}|DrawingApp.DM\\DrawingApp.DM.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.dm\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F88335CD-D626-065E-FB39-128C95524851}|DrawingApp.DM\\DrawingApp.DM.csproj|solutionrelative:drawingapp.dm\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F88335CD-D626-065E-FB39-128C95524851}|DrawingApp.DM\\DrawingApp.DM.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.dm\\drawingresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F88335CD-D626-065E-FB39-128C95524851}|DrawingApp.DM\\DrawingApp.DM.csproj|solutionrelative:drawingapp.dm\\drawingresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F88335CD-D626-065E-FB39-128C95524851}|DrawingApp.DM\\DrawingApp.DM.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.dm\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F88335CD-D626-065E-FB39-128C95524851}|DrawingApp.DM\\DrawingApp.DM.csproj|solutionrelative:drawingapp.dm\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|solutionrelative:drawingapp.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E294992D-449A-518F-109F-50740674D45C}|DrawingApp.Provider\\DrawingApp.Provider.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.provider\\drawingprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E294992D-449A-518F-109F-50740674D45C}|DrawingApp.Provider\\DrawingApp.Provider.csproj|solutionrelative:drawingapp.provider\\drawingprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ofirc\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\build\\Container.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|c:\\shiraai\\server\\drawingapp\\drawingapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F0083EE1-2F4C-07E4-D659-9874C9F64F24}|DrawingApp.Api\\DrawingApp.Api.csproj|solutionrelative:drawingapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,100 +50,117 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "DrawingApp.Api\\appsettings.json",
-              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\appsettings.json",
-              "RelativeToolTip": "DrawingApp.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "DrawingApp.Api\\appsettings.Development.json",
+              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\appsettings.Development.json",
+              "RelativeToolTip": "DrawingApp.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-15T13:02:44.244Z",
+              "WhenOpened": "2026-04-18T21:17:49.493Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "DrawingApp.Api\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "DrawingApp.Api\\Properties\\launchSettings.json",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-15T12:13:27.552Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Program.cs",
-              "RelativeDocumentMoniker": "DrawingApp.Api\\Program.cs",
-              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Program.cs",
-              "RelativeToolTip": "DrawingApp.Api\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAxwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T12:06:14.046Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DrawingsController.cs",
-              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Controllers\\DrawingsController.cs",
-              "RelativeDocumentMoniker": "DrawingApp.Api\\Controllers\\DrawingsController.cs",
-              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Controllers\\DrawingsController.cs",
-              "RelativeToolTip": "DrawingApp.Api\\Controllers\\DrawingsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T12:05:25.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DrawingProvider.cs",
-              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Provider\\DrawingProvider.cs",
-              "RelativeDocumentMoniker": "DrawingApp.Provider\\DrawingProvider.cs",
-              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Provider\\DrawingProvider.cs",
-              "RelativeToolTip": "DrawingApp.Provider\\DrawingProvider.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAQwHQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T11:35:11.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "DrawingResponse.cs",
               "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.DM\\DrawingResponse.cs",
               "RelativeDocumentMoniker": "DrawingApp.DM\\DrawingResponse.cs",
               "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.DM\\DrawingResponse.cs",
               "RelativeToolTip": "DrawingApp.DM\\DrawingResponse.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAvwCMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwB0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T17:41:43.689Z"
+              "WhenOpened": "2026-04-18T20:07:06.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DrawingsController.cs",
+              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Controllers\\DrawingsController.cs",
+              "RelativeDocumentMoniker": "DrawingApp.Api\\Controllers\\DrawingsController.cs",
+              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Controllers\\DrawingsController.cs",
+              "RelativeToolTip": "DrawingApp.Api\\Controllers\\DrawingsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:55:18.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "DrawingApp.Api\\appsettings.json",
+              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\appsettings.json",
+              "RelativeToolTip": "DrawingApp.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-16T22:05:32.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Program.cs",
+              "RelativeDocumentMoniker": "DrawingApp.Api\\Program.cs",
+              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Program.cs",
+              "RelativeToolTip": "DrawingApp.Api\\Program.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:12:56.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "DrawingApp.Api\\Dockerfile",
+              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Dockerfile",
+              "RelativeToolTip": "DrawingApp.Api\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-18T18:10:54.712Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.DM\\User.cs",
-              "RelativeDocumentMoniker": "DrawingApp.DM\\User.cs",
-              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.DM\\User.cs",
-              "RelativeToolTip": "DrawingApp.DM\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Title": "DrawingProvider.cs",
+              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Provider\\DrawingProvider.cs",
+              "RelativeDocumentMoniker": "DrawingApp.Provider\\DrawingProvider.cs",
+              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Provider\\DrawingProvider.cs*",
+              "RelativeToolTip": "DrawingApp.Provider\\DrawingProvider.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwCsAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T11:41:05.371Z"
+              "WhenOpened": "2026-04-16T22:12:52.894Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Drawing.cs",
-              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.DM\\Drawing.cs",
-              "RelativeDocumentMoniker": "DrawingApp.DM\\Drawing.cs",
-              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.DM\\Drawing.cs",
-              "RelativeToolTip": "DrawingApp.DM\\Drawing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T11:41:39.767Z"
+              "Title": "Container.targets",
+              "DocumentMoniker": "C:\\Users\\ofirc\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\build\\Container.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\Users\\ofirc\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\build\\Container.targets",
+              "ToolTip": "C:\\Users\\ofirc\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\build\\Container.targets",
+              "RelativeToolTip": "..\\..\\..\\Users\\ofirc\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\build\\Container.targets",
+              "ViewState": "AgIAANcAAAAAAAAAAAAmwOQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-04-18T18:15:12.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "DrawingApp.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\ShiraAI\\server\\DrawingApp\\DrawingApp.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "DrawingApp.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-16T22:05:36.535Z"
             }
           ]
         }

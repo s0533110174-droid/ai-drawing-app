@@ -14,6 +14,7 @@ CREATE TABLE Users (
 );
 GO
 
+insert into Users(Username,Email,PasswordHash) values ('shira','s.0533110174@gmail.com','XXX')
 
 IF OBJECT_ID('Drawings', 'U') IS NOT NULL DROP TABLE Drawings;
 
