@@ -7,8 +7,11 @@ services:
       - MSSQL_SA_PASSWORD=YourStrongPassword123!
     ports:
       - "1433:1433"
+<<<<<<< HEAD
     volumes:
       - sql_data:/var/opt/mssql
+=======
+>>>>>>> 8b4d8039e13675fe9822b99bf4598018db2062ae
     networks:
       - drawing-network
 
@@ -40,9 +43,12 @@ services:
     networks:
       - drawing-network
 
+<<<<<<< HEAD
 volumes:
   sql_data:
 
+=======
+>>>>>>> 8b4d8039e13675fe9822b99bf4598018db2062ae
 networks:
   drawing-network:
     driver: bridge
